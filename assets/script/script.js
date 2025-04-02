@@ -26,7 +26,7 @@ document.addEventListener("mousemove", function (e) {
     const getVisibleCards = () => {
       if (window.innerWidth < 576) return 1;
       if (window.innerWidth < 992) return 2;
-      return 4;
+      return 3;
     };
 
     // Calcular a largura para deslizar por grupo de cards
@@ -39,9 +39,9 @@ document.addEventListener("mousemove", function (e) {
     // Verificar se há mais cards para navegar
     const updateButtonVisibility = () => {
       const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-      prevBtn.style.opacity = slider.scrollLeft <= 0 ? "0.5" : "1";
+      prevBtn.style.opacity = slider.scrollLeft <= 0 ? "1" : "2.5";
       nextBtn.style.opacity =
-        slider.scrollLeft >= maxScrollLeft ? "0.5" : "1";
+        slider.scrollLeft >= maxScrollLeft ? "1" : "2.5";
     };
 
     // Inicializar visibilidade dos botões
