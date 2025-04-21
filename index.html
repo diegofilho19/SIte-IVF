@@ -8,11 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="icon" type="image/png" href="assets/imgs/icon_white.png" sizes="96x96" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/icon_white.ico">
   </head>
   <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+    <!--Cabeçalho-->
+    <header class="navbar navbar-expand-sm navbar-light bg-light d-flex justify-content-between align-items-center">
+        <div class="container">
+        <a class="navbar-brand" href="index.html">
         <a class="navbar-brand" href="index.html">
           <img src="./assets/imgs/icon_full_blue1.png" alt="Logo - IVF" />
         </a>
@@ -35,12 +37,14 @@
             </li>
           </ul>
         </div>
-      </div>
+
     </header>
+  </div>
 
 
     <!-- Inicio -->
     <div class="content" id="inicio">
+      <div class="container d-flex">
       <div class="description">
         <h1>Soluções na Gestão Pública</h1>
         <h3>
@@ -59,7 +63,10 @@
         />
       </div>
     </div>
+  </div>
+</div>
 
+  <div class="container d-flex">
     <div class="company-intro">
       <div class="intro-text">
         <h2>Oferecemos soluções práticas aos nossos clientes</h2>
@@ -78,8 +85,11 @@
         />
       </div>
     </div>
+  </div>
+</div>
 
-    <div class="parallax-container">
+
+    <div class="parallax-container ">
       <div class="parallax-image left">
         <img
           src="./assets/imgs/icon_blue.png"
@@ -102,48 +112,57 @@
       </div>
     </div>
 
-    <div class="pillars">
-      <div class="pillar-card">
-        <div class="pillar-icon">
-          <img src="./assets/imgs/motherboard.svg" alt="Ícone de Sistemas" />
-        </div>
-        <h3>Sistemas Utilizados</h3>
-        <p>
-          Nossos sistemas são interligados e possuem uma estrutura simplificada
-          para facilitar a gestão pública com ferramentas seguras, ágeis e
-          eficientes.
-        </p>
-      </div>
 
-      <div class="pillar-card">
-        <div class="pillar-icon">
-          <img src="./assets/imgs/cpu.svg" alt="Ícone de Tecnologia" />
-        </div>
-        <h3>Tecnologia e Inovação Para sua gestão</h3>
-        <p>
-          Garantimos as melhores soluções para gestão, sempre incorporando
-          tecnologia e inovação para tornar o trabalho mais eficiente.
-        </p>
-      </div>
 
-      <div class="pillar-card">
-        <div class="pillar-icon">
-          <img
-            src="./assets/imgs/student-cap-svgrepo-com.svg"
-            alt="Ícone de Qualidade"
-          />
-        </div>
-        <h3>Profissionalismo, qualidade e resultados</h3>
-        <p>
-          Contamos com uma equipe qualificada e bem treinada para gerir a
-          administração pública e gerar resultados.
-        </p>
+<div class="container">
+  <div class="row pillars ">
+    <div class="col-4 .col-sm- pillar-card">
+      <div class="pillar-icon">
+        <img src="./assets/imgs/motherboard.svg" alt="Ícone de Sistemas" />
       </div>
+      <h3>Sistemas Utilizados</h3>
+      <p>
+        Nossos sistemas são interligados e possuem uma estrutura simplificada
+        para facilitar a gestão pública com ferramentas seguras, ágeis e
+        eficientes.
+      </p>
     </div>
+
+    <div class="col-4 .col-sm- pillar-card">
+      <div class="pillar-icon">
+        <img src="./assets/imgs/cpu.svg" alt="Ícone de Tecnologia" />
+      </div>
+      <h3>Tecnologia e Inovação Para sua gestão</h3>
+      <p>
+        Garantimos as melhores soluções para gestão, sempre incorporando
+        tecnologia e inovação para tornar o trabalho mais eficiente.
+      </p>
+    </div>
+
+    <div class="col-4 .col-sm- pillar-card">
+      <div class="pillar-icon">
+        <img
+          src="./assets/imgs/student-cap-svgrepo-com.svg"
+          alt="Ícone de Qualidade"
+        />
+      </div>
+      <h3>Profissionalismo, qualidade e resultados</h3>
+      <p>
+        Contamos com uma equipe qualificada e bem treinada para gerir a
+        administração pública e gerar resultados.
+      </p>
+    </div>
+  </div>
+
+</div>
+    
 
 
     <!-- Quem somos? -->
     <div class="who-we-are" id="quem-somos">
+      <div class="container d-flex">
+      
+        
       <div class="animated-logo">
         <img
           src="./assets/imgs/icon_full_white.png"
@@ -173,11 +192,12 @@
           </p>
         </div>
       </div>
+      </div>
     </div>
 
 
     <!-- Nossos Serviços -->
-    <section class="our-services" id="nossos-serviços"">
+    <section class="our-services" id="nossos-serviços">
       <h2>NOSSOS SERVIÇOS</h2>
       <p class="services-description">
         A IVF oferece soluções WiFi simplificadas, eliminando a necessidade de
@@ -248,7 +268,9 @@
     </section>
 
     <!-- Nova seção de contato -->
-    <section class="contact-section" id="contato"">
+    
+    <section class="contact-section" id="contato">
+      <div class="container d-flex"></div> 
       <div class="contact-container">
         <h2>CONTATO</h2>
 
@@ -338,7 +360,9 @@
           </div>
         </div>
       </div>
+    </div> 
     </section>
+
 
     <!-- Footer Section -->
 <footer class="footer">

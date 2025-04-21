@@ -17,10 +17,13 @@ document.addEventListener("mousemove", function (e) {
     rightImage.style.transform = `translate(${moveX}px, ${moveY}px) rotate(15deg)`;
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", function () {
     const slider = document.querySelector(".services-slider");
     const prevBtn = document.querySelector(".prev-btn");
     const nextBtn = document.querySelector(".next-btn");
+
+    // Ativa scroll suave
+    slider.style.scrollBehavior = "smooth";
 
     // Número de cards visíveis depende do tamanho da tela
     const getVisibleCards = () => {
@@ -31,7 +34,9 @@ document.addEventListener("mousemove", function (e) {
 
     // Calcular a largura para deslizar por grupo de cards
     const getScrollAmount = () => {
-      const cardWidth = slider.querySelector(".service-card").offsetWidth;
+      const card = slider.querySelector(".service-card");
+      if (!card) return 0;
+      const cardWidth = card.offsetWidth;
       const cardMargin = 20; // gap entre cards
       return (cardWidth + cardMargin) * getVisibleCards();
     };
@@ -39,9 +44,9 @@ document.addEventListener("mousemove", function (e) {
     // Verificar se há mais cards para navegar
     const updateButtonVisibility = () => {
       const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-      prevBtn.style.opacity = slider.scrollLeft <= 0 ? "1" : "2.5";
+      prevBtn.style.opacity = slider.scrollLeft <= 0 ? "0.5" : "1";
       nextBtn.style.opacity =
-        slider.scrollLeft >= maxScrollLeft ? "1" : "2.5";
+        slider.scrollLeft >= maxScrollLeft ? "0.5" : "1";
     };
 
     // Inicializar visibilidade dos botões
@@ -63,46 +68,5 @@ document.addEventListener("mousemove", function (e) {
     window.addEventListener("resize", () => {
       updateButtonVisibility();
     });
-  });
+});
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const contactForm = document.getElementById("contactForm");
-
-  //   if (contactForm) {
-  //     contactForm.addEventListener("submit", function (e) {
-  //       e.preventDefault();
-
-  //       const name = document.getElementById("name").value;
-  //       const email = document.getElementById("email").value;
-  //       const phone = document.getElementById("phone").value;
-  //       const message = document.getElementById("message").value;
-
-  //       // Configurando o serviço EmailJS para envio de e-mails
-  //       // Você precisará criar uma conta gratuita em https://www.emailjs.com/
-  //       // e substituir 'service_id', 'template_id' e 'user_id' pelos seus dados
-
-  //       const templateParams = {
-  //         from_name: name,
-  //         from_email: email,
-  //         from_phone: phone,
-  //         message: message,
-  //       };
-
-  //       // Método para enviar o e-mail usando EmailJS
-  //       emailjs
-  //         .send("service_id", "template_id", templateParams, "user_id")
-  //         .then(
-  //           function (response) {
-  //             alert("Mensagem enviada com sucesso!");
-  //             contactForm.reset();
-  //           },
-  //           function (error) {
-  //             alert(
-  //               "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde."
-  //             );
-  //             console.error("Erro:", error);
-  //           }
-  //         );
-  //     });
-  //   }
-  // });

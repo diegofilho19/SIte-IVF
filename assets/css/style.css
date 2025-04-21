@@ -1,6 +1,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -196,7 +198,7 @@ ul li:hover a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 40px;
+    padding: 40px 20px;
     background-color: #ffffff;
     overflow: hidden;
     /* Para evitar scroll horizontal durante animações */
@@ -204,7 +206,7 @@ ul li:hover a:hover {
 
 .intro-text {
     flex: 1;
-    padding-right: 40px;
+    padding-right: 0px;
     animation: slideInLeft 1s ease-out;
 }
 
@@ -533,12 +535,14 @@ ul li:hover a:hover {
 .contact-section {
     background: linear-gradient(135deg, #003a70 0%, #002550 100%);
     color: white;
-    padding: 60px 20px;
+    padding: 30px 10px;
 }
 
 .contact-container {
-    max-width: 1200px;
+    max-width: 800px;
+    height: auto;
     margin: 0 auto;
+    width: 100%;
 }
 
 .contact-section h2 {
@@ -882,20 +886,26 @@ ul li:hover a:hover {
     }
     /* Ajuste na seção .content para corrigir o background */
     .content {
-        flex-direction: column;
-        padding: clamp(40px, 10vw, 60px) 15px;
-        min-height: 400px; /* Garante altura mínima para exibir o fundo */
-        background-image: url('../imgs/Component 1.svg'); /* Corrige o caminho (remove \ e ajusta aspas) */
-        background-size: cover; /* Garante que o fundo cubra a área */
+        flex-direction: column !important;
+        padding: clamp(40px, 10vw, 60px) 20px;
+        min-height: 400px;
+        background-image: url('../imgs/Component\ 1.svg');
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-color: #003a70; /* Fallback caso a imagem não carregue */
-        position: relative;
+        background-color: #003a70;
+    }
+
+    .content .container {
+        flex-direction: column !important;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .description {
         max-width: 100%;
         margin-bottom: 25px;
+        order: 1;
     }
 
     .description h1 {
@@ -908,17 +918,22 @@ ul li:hover a:hover {
         width: 90%;
         margin: 0 auto;
         line-height: 1.6;
+        text-align: center;
     }
 
     .illustration {
-        margin: 0 auto;
+        margin: 0 auto 20px;
         padding: 10px;
         max-width: 80%;
+        order: 1;
     }
 
     .illustration img {
-        max-width: clamp(200px, 70vw, 300px);
+        max-width: 100%;
+        width: clamp(200px, 80vw, 300px);
+        height: auto;
         margin: 0 auto;
+        display: block;
     }
 
     .company-intro {
@@ -979,6 +994,7 @@ ul li:hover a:hover {
         max-width: 90%;
         margin: 0 auto;
         padding: 15px;
+        width: 90%;
     }
 
     .pillar-icon {
@@ -996,31 +1012,39 @@ ul li:hover a:hover {
 
     /* Seção Quem Somos - Logo menor */
     .who-we-are {
-        flex-direction: column;
         padding: clamp(30px, 8vw, 40px) 15px;
-        gap: 20px;
-        text-align: center; /* Centraliza o conteúdo */
-    }    
+    }
+
+    .who-we-are .container {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
 
     .animated-logo {
-        flex: 0 0 auto; /* Ajusta para ocupar o espaço necessário */
-        padding: 0; /* Remove padding */
-        margin-bottom: 20px; /* Adiciona margem abaixo do logo */
+        flex: 0 0 auto;
+        padding: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .rotating-logo {
-        width: clamp(150px, 50vw, 200px); /* Ajusta o tamanho da logo */
-        max-width: 100%; /* Garante que não ultrapasse o container */
+        width: clamp(150px, 50vw, 250px) !important;
+        max-width: 100%;
         height: auto;
     }
 
     .content-wrapper {
         padding: 0;
         text-align: center;
+        width: 100%;
     }
 
     .content-wrapper h2 {
         font-size: clamp(22px, 5.5vw, 28px);
+        text-align: center;
     }
 
     .content-wrapper h2::after {
@@ -1029,10 +1053,17 @@ ul li:hover a:hover {
         width: 40px;
     }
 
+    .text-content {
+        text-align: center;
+        padding: 0 10px;
+    }
+
     .text-content p {
         font-size: clamp(13px, 3.5vw, 14px);
         line-height: 1.7;
+        text-align: center;
     }
+
 
     .our-services {
         padding: clamp(30px, 8vw, 40px) 15px;
@@ -1226,15 +1257,15 @@ ul li:hover a:hover {
     }
 
     .description h1 {
-        font-size: clamp(16pt, 5vw, 18pt);
+        font-size: clamp(12pt, 1.5vw, 12pt);
     }
 
     .description h3 {
-        font-size: clamp(11pt, 3.5vw, 12pt);
+        font-size: clamp(10pt, 1.5vw, 10pt);
     }
 
     .illustration img {
-        max-width: clamp(180px, 60vw, 250px);
+        max-width: clamp(120px, 20vw, 220px);
     }
 
     .intro-text h2 {
