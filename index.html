@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IVF - ASSESSORIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,9 +15,8 @@
   </head>
   <body>
     <!--Cabeçalho-->
-    <header class="navbar navbar-expand-sm navbar-light bg-light d-flex justify-content-between align-items-center">
-        <div class="container">
-        <a class="navbar-brand" href="index.html">
+    <header class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="./assets/imgs/icon_full_blue1.png" alt="Logo - IVF" />
         </a>
@@ -29,67 +31,88 @@
             <li class="nav-item">
               <a class="nav-link" href="#quem-somos">Quem Somos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#nossos-serviços">Nossos Serviços</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Serviços
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Softwares</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="educarteira.html">EduCarteira</a></li>
+                    <li><a class="dropdown-item" href="recadastramento-imobiliario.html">Recadastramento Imobiliário</a></li>
+                    <li><a class="dropdown-item" href="feiraraiz.html">FeiraRaiz</a></li>
+                    <li><a class="dropdown-item" href="sgce.html">SGCE (Sistema de Gerenciamento de Estoque)</a></li>
+                  </ul>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#nossos-serviços">Outros Serviços</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contato">Contato</a>
             </li>
           </ul>
         </div>
-
+      </div>
     </header>
-  </div>
 
-
-    <!-- Inicio -->
-    <div class="content" id="inicio">
-      <div class="container d-flex">
-      <div class="description">
-        <h1>Soluções na Gestão Pública</h1>
-        <h3>
-          Na IVF, entendemos os desafios da gestão pública e oferecemos soluções
-          tecnológicas que simplificam e otimizam processos. Nossos sistemas,
-          como o Portal da Transparência, SIP, SIA e SCPI, são projetados para
-          aumentar a eficiência e a transparência da sua gestão. Além disso,
-          criamos sites e aplicativos personalizados e oferecemos suporte
-          tributário para atender às suas necessidades específicas.
-        </h3>
+    <!-- Inicio (Hero Section) -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 hero-content text-center text-lg-start">
+            <span class="hero-badge">Assessoria &amp; Tecnologia</span>
+            <h1 class="hero-title">Soluções na Gestão Pública</h1>
+            <p class="hero-text">
+              Na IVF, entendemos os desafios da gestão pública e oferecemos soluções tecnológicas que simplificam e otimizam processos. Nossos sistemas, como o Portal da Transparência, SIP, SIA e SCPI, são projetados para aumentar a eficiência e a transparência municipal. Além disso, criamos sites e aplicativos personalizados e oferecemos suporte tributário especializado.
+            </p>
+            <div class="hero-actions d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+              <a href="#contato" class="btn btn-custom-hero">Fale Conosco</a>
+              <a href="#nossos-serviços" class="btn btn-custom-hero-outline">Nossos Serviços</a>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+            <div class="hero-image-wrapper">
+              <img
+                src="./assets/imgs/At the office-pana 1.png"
+                alt="Ilustração de colaboração e trabalho em equipe"
+                class="hero-illustration img-fluid"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="illustration">
-        <img
-          src="./assets/imgs/At the office-pana 1.png"
-          alt="Ilustração de colaboração e trabalho em equipe"
-        />
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-  <div class="container d-flex">
-    <div class="company-intro">
-      <div class="intro-text">
-        <h2>Oferecemos soluções práticas aos nossos clientes</h2>
-        <p>
-          Com a IVF Assessoria, você encontra o suporte completo para navegar pelo complexo universo tributário, 
-          garantir a transparência em suas operações e otimizar seus processos com nossos serviços digitais. 
-          Nossa expertise é focada em oferecer soluções personalizadas e eficientes, que vão desde a consultoria 
-          e planejamento tributário até a implementação de ferramentas digitais que facilitam a gestão e o acesso às 
-          informações do seu negócio. Conte com a nossa experiência para simplificar suas obrigações e impulsionar o seu crescimento.
-        </p>
+    <!-- Apresentação da Empresa -->
+    <section class="intro-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 intro-content text-center text-lg-start pe-lg-5">
+            <h2 class="section-title text-center text-lg-start mb-4">Oferecemos soluções práticas aos nossos clientes</h2>
+            <p class="intro-description">
+              Com a <strong>IVF Assessoria</strong>, você encontra o suporte completo para navegar pelo complexo universo tributário, garantir a transparência em suas operações e otimizar seus processos com nossos serviços digitais.
+            </p>
+            <p class="intro-description">
+              Nossa expertise é focada em oferecer soluções personalizadas e eficientes, que vão desde a consultoria e planejamento tributário até a implementação de ferramentas digitais modernas que facilitam a gestão e o acesso às informações do seu município. Conte com a nossa experiência para simplificar suas obrigações e impulsionar o seu crescimento.
+            </p>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+            <div class="intro-image-wrapper">
+              <img
+                src="./assets/imgs/Business deal-bro 1.png"
+                alt="Reunião de negócios"
+                class="img-fluid rounded-4 shadow-sm intro-illustration"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="intro-image">
-        <img
-          src="./assets/imgs/Business deal-bro 1.png"
-          alt="Reunião de negócios"
-        />
-      </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-
-    <div class="parallax-container ">
+    <!-- Seção Parallax -->
+    <div class="parallax-container">
       <div class="parallax-image left">
         <img
           src="./assets/imgs/icon_blue.png"
@@ -97,7 +120,7 @@
           class="parallax-logo"
         />
       </div>
-      <div class="text-center">
+      <div class="parallax-glass-card text-center">
         <h2>
           Estamos no mercado desde 2017 trazendo inovações e soluções,
           facilitando a vida dos nossos clientes.
@@ -112,166 +135,194 @@
       </div>
     </div>
 
-
-
-<div class="container">
-  <div class="row pillars ">
-    <div class="col-4 .col-sm- pillar-card">
-      <div class="pillar-icon">
-        <img src="./assets/imgs/motherboard.svg" alt="Ícone de Sistemas" />
-      </div>
-      <h3>Sistemas Utilizados</h3>
-      <p>
-        Nossos sistemas são interligados e possuem uma estrutura simplificada
-        para facilitar a gestão pública com ferramentas seguras, ágeis e
-        eficientes.
-      </p>
-    </div>
-
-    <div class="col-4 .col-sm- pillar-card">
-      <div class="pillar-icon">
-        <img src="./assets/imgs/cpu.svg" alt="Ícone de Tecnologia" />
-      </div>
-      <h3>Tecnologia e Inovação Para sua gestão</h3>
-      <p>
-        Garantimos as melhores soluções para gestão, sempre incorporando
-        tecnologia e inovação para tornar o trabalho mais eficiente.
-      </p>
-    </div>
-
-    <div class="col-4 .col-sm- pillar-card">
-      <div class="pillar-icon">
-        <img
-          src="./assets/imgs/student-cap-svgrepo-com.svg"
-          alt="Ícone de Qualidade"
-        />
-      </div>
-      <h3>Profissionalismo, qualidade e resultados</h3>
-      <p>
-        Contamos com uma equipe qualificada e bem treinada para gerir a
-        administração pública e gerar resultados.
-      </p>
-    </div>
-  </div>
-
-</div>
-    
-
-
-    <!-- Quem somos? -->
-    <div class="who-we-are" id="quem-somos">
-      <div class="container d-flex">
-      
-        
-      <div class="animated-logo">
-        <img
-          src="./assets/imgs/icon_full_white.png"
-          alt="IVF Logo"
-          class="rotating-logo"
-          style="width: 600px"
-        />
-      </div>
-      <div class="content-wrapper">
-        <h2>QUEM SOMOS?</h2>
-        <div class="text-content">
-          <p>
-            A IVF é uma parceira estratégica das prefeituras e câmaras
-            municipais, oferecendo soluções tecnológicas completas e
-            personalizadas desde 2017. Nosso compromisso é potencializar a
-            eficiência da gestão pública, fornecendo suporte técnico
-            especializado e ferramentas para a administração diária.
-          </p>
-
-          <p>
-            Nosso portfólio é diversificado, abrangendo desde a implantação e
-            manutenção de sistemas como Portal da Transparência, SIP, SIA e
-            SCPI, até a criação de sites e aplicativos personalizados. Nossa
-            expertise se estende também a soluções na área tributária,
-            garantindo que nossos clientes tenham acesso a tecnologias que
-            otimizem processos e atendam às demandas da população.
-          </p>
-        </div>
-      </div>
-      </div>
-    </div>
-
-
-    <!-- Nossos Serviços -->
-    <section class="our-services" id="nossos-serviços">
-      <h2>NOSSOS SERVIÇOS</h2>
-      <p class="services-description">
-        A IVF oferece soluções WiFi simplificadas, eliminando a necessidade de
-        equipes de TI especializadas e treinamentos extensivos. Seu foco é
-        fornecer conectividade eficiente, com a promessa de que "tudo
-        simplesmente funciona".
-      </p>
-      <div class="services-container">
-        <button class="nav-btn prev-btn">&#8592;</button>
-        <div class="services-slider">
-          <div class="service-card">
-              <i class="fas fa-piggy-bank service-icon"></i>
-            <h3>Sistema Integrado de Arrecadação</h3>
-            <p>
-              O Sistema Integrado de Arrecadação (SIA) garante o controle
-              detalhado e seguro das receitas municipais. Adaptável a códigos
-              tributários, calcula e gerencia tributos e preços públicos.
-              Oferece controle de tabelas, previsões, estatísticas e relatórios,
-              além de segurança com controle de usuários e registro de
-              operações.
-            </p>
+    <!-- Pilares de Valor -->
+    <section class="pillars-section py-5">
+      <div class="container">
+        <div class="row pillars g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <img src="./assets/imgs/motherboard.svg" alt="Ícone de Sistemas" />
+              </div>
+              <h3>Sistemas Utilizados</h3>
+              <p>
+                Nossos sistemas são interligados e possuem uma estrutura simplificada para facilitar a gestão pública com ferramentas seguras, ágeis e eficientes.
+              </p>
+            </div>
           </div>
-          <div class="service-card">
-            <i class="fas fa-users service-icon"></i>
-            <h3>Sistema Integrado de Pessoal</h3>
-            <p>
-              O Sistema Integrado de Pessoal (SIP) da Florili é um sistema
-              multifuncional e seguro para gestão de pessoal, com personalização
-              e funcionalidades multi-empresa modular. As soluções WiFi da IVF
-              proporcionam conectividade simplificada, sem necessidade de
-              conhecimento técnico especializado. Ambos os sistemas destacam-se
-              pela facilidade de uso e eficiência.
-            </p>
+
+          <div class="col-md-4">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <img src="./assets/imgs/cpu.svg" alt="Ícone de Tecnologia" />
+              </div>
+              <h3>Tecnologia e Inovação</h3>
+              <p>
+                Garantimos as melhores soluções para gestão, sempre incorporando tecnologia e inovação para tornar o trabalho administrativo mais eficiente.
+              </p>
+            </div>
           </div>
-          <div class="service-card">
-            <i class="fas fa-calculator service-icon"></i>
-            <h3>Sistema de Contabilidade Pública Integrado</h3>
-            <p>
-              O SCPI foi projetado para atender as necessidades dos usuários das Entidades Públicas, visando facilitar o seu dia a dia. 
-              Baseamo-nos nas experiências dos usuários para desenvolver cada tela e o resultado foi um software de fácil usabilidade que p
-              ermite um aprendizado muito mais rápido e consistente possibilitando um melhor aproveitamento da ferramenta.
-            </p>
-          </div>
-          <div class="service-card">
-            <i class="fas fa-search service-icon"></i>
-            <h3>Portal da Transparência</h3>
-            <p>
-              O Portal da Transparência é uma plataforma online que permite o
-              acesso público a informações sobre a gestão dos recursos públicos
-              no Brasil. Nele, os cidadãos podem acompanhar como o dinheiro dos
-              impostos é utilizado, além de informar sobre outros assuntos
-              relacionados à administração pública federal.
-            </p>
-          </div>
-          <div class="service-card">
-            <i class="fas fa-globe service-icon"></i>
-            <h3>Criação de Sites</h3>
-            <p>
-              Precisa de um site profissional? Criamos sites personalizados,
-              modernos e responsivos, que se adaptam a qualquer dispositivo.
-              Destaque sua marca online e alcance novos clientes com uma
-              presença digital impactante.
-            </p>
+
+          <div class="col-md-4">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <img src="./assets/imgs/student-cap-svgrepo-com.svg" alt="Ícone de Qualidade" />
+              </div>
+              <h3>Profissionalismo e Resultados</h3>
+              <p>
+                Contamos com uma equipe qualificada e bem treinada para gerir a administração pública e gerar resultados consistentes e de alta qualidade.
+              </p>
+            </div>
           </div>
         </div>
-        <button class="nav-btn next-btn">&#8594;</button>
       </div>
     </section>
 
-    <!-- Nova seção de contato -->
-    
+    <!-- Quem Somos -->
+    <section class="who-we-are" id="quem-somos">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 text-center mb-5 mb-lg-0 animated-logo-container">
+            <div class="animated-logo">
+              <img
+                src="./assets/imgs/icon_full_white.png"
+                alt="IVF Logo"
+                class="rotating-logo"
+              />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="content-wrapper">
+              <h2 class="section-title text-start mb-4">QUEM SOMOS?</h2>
+              <div class="text-content">
+                <p>
+                  A IVF é uma parceira estratégica das prefeituras e câmaras municipais, oferecendo soluções tecnológicas completas e personalizadas desde 2017. Nosso compromisso é potencializar a eficiência da gestão pública, fornecendo suporte técnico especializado e ferramentas inteligentes para a administração diária.
+                </p>
+                <p>
+                  Nosso portfólio é diversificado, abrangendo desde a implantação e manutenção de sistemas como Portal da Transparência, SIP, SIA e SCPI, até o desenvolvimento de sites e aplicativos personalizados de última geração. Nossa expertise se estende também a soluções e assessoramento na área tributária, garantindo que nossos clientes tenham acesso a tecnologias que otimizam processos e atendam plenamente às demandas da população.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossos Serviços -->
+    <section class="our-services" id="nossos-serviços">
+      <div class="container">
+        <h2>NOSSOS SERVIÇOS &amp; SOFTWARES</h2>
+        <p class="services-description">
+          Oferecemos um portfólio completo de softwares especializados, aplicativos e assessoria técnica para modernizar a gestão pública e privada, promovendo a eficiência e a excelência operacional.
+        </p>
+        
+        <div class="services-container">
+          <button class="nav-btn prev-btn" aria-label="Anterior"><i class="fas fa-arrow-left"></i></button>
+          
+          <div class="services-slider">
+            <!-- Software 1: EduCarteira -->
+            <div class="service-card featured-software">
+              <div class="software-badge">Software</div>
+              <i class="fas fa-graduation-cap service-icon"></i>
+              <h3>EduCarteira</h3>
+              <p>
+                Plataforma integrada de gestão escolar e controle de acesso dos alunos por carteira digital. Promove segurança nas escolas e facilidade de comunicação em tempo real com as famílias.
+              </p>
+              <a href="educarteira.html" class="service-link-btn">Saiba Mais <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Software 2: Recadastramento Imobiliário -->
+            <div class="service-card featured-software">
+              <div class="software-badge">Software</div>
+              <i class="fas fa-map-marked-alt service-icon"></i>
+              <h3>Recadastramento Imobiliário</h3>
+              <p>
+                Solução móvel de recenseamento e georreferenciamento de imóveis. Permite a atualização cadastral em campo de forma offline, integrando fotos, coordenadas e dados ao sistema tributário.
+              </p>
+              <a href="recadastramento-imobiliario.html" class="service-link-btn">Saiba Mais <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Software 3: FeiraRaiz -->
+            <div class="service-card featured-software">
+              <div class="software-badge">Software</div>
+              <i class="fas fa-leaf service-icon"></i>
+              <h3>FeiraRaiz</h3>
+              <p>
+                Plataforma digital para cadastramento e incentivo à agricultura familiar e feiras livres. Facilita o mapeamento de feirantes e estimula a economia e o comércio regional sustentável.
+              </p>
+              <a href="feiraraiz.html" class="service-link-btn">Saiba Mais <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Software 4: sgce -->
+            <div class="service-card featured-software">
+              <div class="software-badge">Software</div>
+              <i class="fas fa-boxes service-icon"></i>
+              <h3>SGCE</h3>
+              <p>
+                Sistema de Gerenciamento de Estoque e Almoxarifado para controle em tempo real de insumos de saúde, educação e infraestrutura. Otimize a distribuição e evite desperdícios na gestão.
+              </p>
+              <a href="sgce.html" class="service-link-btn">Saiba Mais <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Service 5: SIA -->
+            <div class="service-card">
+              <i class="fas fa-piggy-bank service-icon"></i>
+              <h3>Sistema Integrado de Arrecadação</h3>
+              <p>
+                O SIA garante o controle detalhado e seguro das receitas municipais. Adaptável a códigos tributários locais, calcula e gerencia tributos e preços públicos com controle rígido e relatórios completos.
+              </p>
+              <a href="#contato" class="service-link-btn">Fale Conosco <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Service 6: SIP -->
+            <div class="service-card">
+              <i class="fas fa-users service-icon"></i>
+              <h3>Sistema Integrado de Pessoal</h3>
+              <p>
+                O SIP é uma solução robusta e segura para gestão de recursos humanos e folha de pagamento pública, oferecendo flexibilidade de regras, controle multi-entidade e conformidade legal total.
+              </p>
+              <a href="#contato" class="service-link-btn">Fale Conosco <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Service 7: SCPI -->
+            <div class="service-card">
+              <i class="fas fa-calculator service-icon"></i>
+              <h3>Contabilidade Pública Integrada</h3>
+              <p>
+                O SCPI foi projetado para facilitar a contabilidade pública diária. Com usabilidade otimizada, permite a geração de relatórios de LRF, prestação de contas aos tribunais e excelente controle orçamentário.
+              </p>
+              <a href="#contato" class="service-link-btn">Fale Conosco <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Service 8: Portal da Transparência -->
+            <div class="service-card">
+              <i class="fas fa-search service-icon"></i>
+              <h3>Portal da Transparência</h3>
+              <p>
+                Plataforma online de dados abertos que permite ao cidadão acompanhar receitas, despesas, licitações e contratos em tempo real, atendendo integralmente à Lei de Acesso à Informação (LAI).
+              </p>
+              <a href="#contato" class="service-link-btn">Fale Conosco <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <!-- Service 9: Criação de Sites -->
+            <div class="service-card">
+              <i class="fas fa-globe service-icon"></i>
+              <h3>Criação de Sites &amp; Portais</h3>
+              <p>
+                Desenvolvimento de sites oficiais, portais institucionais e aplicativos sob medida. Designs modernos, totalmente responsivos e otimizados para acessibilidade e engajamento do público.
+              </p>
+              <a href="#contato" class="service-link-btn">Fale Conosco <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+          
+          <button class="nav-btn next-btn" aria-label="Próximo"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
     <section class="contact-section" id="contato">
-      <div class="container d-flex"></div> 
-      <div class="contact-container">
+      <div class="container">
         <h2>CONTATO</h2>
 
         <div class="social-icons">
@@ -279,6 +330,7 @@
             href="https://www.instagram.com/ivfassessoria/"
             target="_blank"
             class="social-icon"
+            aria-label="Instagram"
           >
             <i class="fab fa-instagram"></i>
           </a>
@@ -286,81 +338,96 @@
             href="https://wa.me/5581987054607"
             target="_blank"
             class="social-icon"
+            aria-label="WhatsApp"
           >
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
 
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="location-block">
-              <h3>LOCALIZAÇÃO:</h3>
-              <div class="map-container">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467.650478182284!2d-35.97521461492405!3d-8.278819480431531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98bb8a3fa7eff%3A0xbf67420e0e242c6b!2sR.%20Visc.%20de%20Inha%C3%BAma%2C%20435%20-%20Maur%C3%ADcio%20de%20Nassau%2C%20Caruaru%20-%20PE%2C%2055012-010!5e1!3m2!1spt-BR!2sbr!4v1743188465486!5m2!1spt-BR!2sbr"
-                  width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contact-content-wrapper">
+          <div class="row g-4 align-items-stretch">
+            <!-- Info & Mapa -->
+            <div class="col-lg-5">
+              <div class="contact-card-info h-100">
+                <div class="location-block">
+                  <h3>LOCALIZAÇÃO:</h3>
+                  <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.2829423399344!2d-35.98130502391105!3d-8.27461198318035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98bc1967b5f3f%3A0xee686fc51faa08fe!2sR.%20Santa%20Clara%2C%20294%20-%20Maur%C3%ADcio%20de%20Nassau%2C%20Caruaru%20-%20PE%2C%2055012-250!5e0!3m2!1spt-BR!2sbr!4v1781182975019!5m2!1spt-BR!2sbr" 
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+
+                <div class="contact-details-list">
+                  <div class="contact-item">
+                    <i class="far fa-clock"></i>
+                    <p>Seg - Sex: 08:00 - 18:00</p>
+                  </div>
+                  <div class="contact-item">
+                    <i class="far fa-envelope"></i>
+                    <p>atendimento@ivfassessoria.com</p>
+                  </div>
+                  <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(81) 98705-4607</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="far fa-clock"></i>
-                <p>Seg - Sex: 08:00 - 18:00</p>
-              </div>
-              <div class="contact-item">
-                <i class="far fa-envelope"></i>
-                <p>atendimento@ivfassessoria.com</p>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-phone-alt"></i>
-                <p>(81) 98705-4607</p>
+            <!-- Formulário -->
+            <div class="col-lg-7">
+              <div class="contact-card-form h-100">
+                <form id="contactForm" class="contact-form-modern" action="https://formsubmit.co/atendimento@ivfassessoria.com" method="POST">
+                  <div class="form-floating-custom mb-3">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="form-control-custom"
+                      placeholder="Seu nome"
+                      required
+                    />
+                    <label for="name">Seu nome</label>
+                  </div>
+                  <div class="form-floating-custom mb-3">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control-custom"
+                      placeholder="E-mail"
+                      required
+                    />
+                    <label for="email">E-mail</label>
+                  </div>
+                  <div class="form-floating-custom mb-3">
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-control-custom"
+                      placeholder="Telefone"
+                      required
+                    />
+                    <label for="phone">Telefone</label>
+                  </div>
+                  <div class="form-floating-custom mb-3">
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-control-custom textarea-custom"
+                      placeholder="Sua mensagem"
+                      required
+                    ></textarea>
+                    <label for="message">Sua mensagem</label>
+                  </div>
+                  <button type="submit" class="submit-btn-modern">ENVIAR MENSAGEM</button>
+                </form>
               </div>
             </div>
-          </div>
-
-          <div class="contact-form-container">
-            <form id="contactForm" class="contact-form" action="https://formsubmit.co/atendimento@ivfassessoria.com" method="POST">
-              <div class="form-group">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Seu nome"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="E-mail"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Telefone"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Sua mensagem"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
-            </form>
           </div>
         </div>
       </div>
-    </div> 
     </section>
 
 
@@ -382,7 +449,7 @@
         <div class="footer-bottom">
             <div class="footer-location">
                 <h4>CARUARU - PERNAMBUCO</h4>
-                <p>Visconde de Inhauma, 435, Sala 101. Empresarial Edifício Luisa Batista.</p>
+                <p>Rua Santa Clara, n° 311, Sala 301 - Mauricio de Nassau</p>
             </div>
             <div class="footer-contact">
                 <h4>CONTATO</h4>
@@ -403,6 +470,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="/assets/script/script.js"></script>
+<script src="./assets/script/script.js"></script>
 </body>
 </html>

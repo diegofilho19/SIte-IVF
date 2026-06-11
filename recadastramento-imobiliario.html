@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recadastramento Imobiliário - IVF ASSESSORIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/icon_white.ico">
+    <style>
+      :root {
+        --primary-color: #0f4c5c;
+        --secondary-color: #e36414;
+        --accent-color: #fb8b24;
+        --hero-bg: linear-gradient(135deg, #0a303b 0%, #0f4c5c 100%);
+        --accent-light: rgba(251, 139, 36, 0.15);
+        --primary-light: rgba(15, 76, 92, 0.06);
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #333333;
+        background-color: #f8fafc;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+      }
+
+      /* Hero section */
+      .subpage-hero {
+        background: var(--hero-bg);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .subpage-hero::before {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+        top: -100px;
+        right: -100px;
+      }
+
+      .subpage-hero::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: var(--accent-light);
+        filter: blur(100px);
+        bottom: -50px;
+        left: 10%;
+        border-radius: 50%;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glowingText 4s infinite;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      /* Cards */
+      .feature-card {
+        background: #ffffff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        padding: 40px 30px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background: var(--secondary-color);
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(15, 76, 92, 0.08);
+      }
+
+      .feature-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .feature-icon-box {
+        width: 65px;
+        height: 65px;
+        border-radius: 16px;
+        background: var(--primary-light);
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover .feature-icon-box {
+        background: var(--primary-color);
+        color: #ffffff;
+        transform: rotate(5deg);
+      }
+
+      /* Benefit item */
+      .benefit-item {
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+        padding: 24px;
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--secondary-color);
+      }
+
+      .benefit-item:hover {
+        background: #ffffff;
+        transform: translateX(8px);
+        box-shadow: 0 10px 30px rgba(15, 76, 92, 0.06);
+      }
+
+      .benefit-icon {
+        color: var(--secondary-color);
+        font-size: 22px;
+        margin-top: 2px;
+      }
+
+      .section-title {
+        color: var(--primary-color);
+        font-weight: 800;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 12px;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 4px;
+        background: var(--secondary-color);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .section-title.text-start::after {
+        left: 0;
+        transform: none;
+      }
+
+      .btn-custom {
+        border-radius: 30px;
+        font-weight: 700;
+        padding: 14px 32px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        color: #ffffff !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Cabeçalho-->
+    <header class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/imgs/icon_full_blue1.png" alt="Logo - IVF" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#quem-somos">Quem Somos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Serviços
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Softwares</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="educarteira.html">EduCarteira</a></li>
+                    <li><a class="dropdown-item" href="recadastramento-imobiliario.html">Recadastramento Imobiliário</a></li>
+                    <li><a class="dropdown-item" href="feiraraiz.html">FeiraRaiz</a></li>
+                    <li><a class="dropdown-item" href="sgce.html">SGCE (Sistema de Gerenciamento de Estoque)</a></li>
+                  </ul>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="index.html#nossos-serviços">Outros Serviços</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="subpage-hero">
+      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div class="text-center text-md-start">
+          <h1 class="hero-title mb-3">Recadastramento Imobiliário</h1>
+          <p class="hero-subtitle mb-4">Modernização tributária e inteligência territorial para municípios inteligentes.</p>
+          <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+            <a href="index.html#contato" class="btn btn-light btn-custom text-dark">Saiba Como Implementar</a>
+            <a href="#detalhes" class="btn btn-outline-light btn-custom">Saber Mais</a>
+          </div>
+        </div>
+        <div class="mt-5 mt-md-0 d-flex justify-content-center">
+          <img src="./assets/imgs/splash-icon.png" alt="Recadastramento Imobiliário Logo" class="rotating-logo img-fluid" style="max-width: 280px; filter: drop-shadow(0px 10px 25px rgba(0,0,0,0.25)); animation: floatingAnimation 4s ease-in-out infinite;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Section -->
+    <div id="detalhes" class="container my-5 py-5">
+      <div class="text-center mb-5">
+        <h2 class="section-title mb-4">O que é o Recadastramento Imobiliário?</h2>
+        <p class="lead mx-auto text-muted mt-2" style="max-width: 850px; font-size: 1.15rem; line-height: 1.8;">O serviço de Recadastramento Imobiliário da IVF foca na modernização técnica e digital do cadastro de imóveis do município. Utilizando vistorias de campo e geoprocessamento moderno, garantimos que a arrecadação de IPTU seja justa, precisa e baseada em dados georreferenciados atualizados.</p>
+      </div>
+
+      <!-- Cards de Funcionalidades -->
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Geoprocessamento</h4>
+            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Mapeamento preciso através de imagens aéreas de satélite de alta definição.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-route"></i>
+            </div>
+            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Vistorias em Campo</h4>
+            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Equipe de campo qualificada validando áreas e parâmetros de construção in loco.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Justiça Fiscal</h4>
+            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Cálculo e lançamento de tributos correspondentes à realidade física atual de cada lote.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card feature-card">
+            <div class="feature-icon-box">
+              <i class="fas fa-database"></i>
+            </div>
+            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Integração Cadastral</h4>
+            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Dados georreferenciados sincronizados de forma ágil com os sistemas de arrecadação municipal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Screenshot Gallery Section -->
+      <div class="row mt-5 pt-4 justify-content-center">
+        <div class="col-12 text-center mb-5">
+          <h3 class="section-title">Aplicativo de Vistoria de Campo</h3>
+          <p class="text-muted mt-2">Nosso aplicativo mobile facilita a coleta e atualização de dados em tempo real pelas equipes de campo.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card border-0 shadow overflow-hidden" style="border-radius: 24px; max-width: 250px; border: 8px solid #333 !important; box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important; transition: transform 0.3s ease;">
+            <img src="./assets/imgs/2026-04-27_11-28.png" alt="Aplicativo - Coleta de Dados" class="img-fluid" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card border-0 shadow overflow-hidden" style="border-radius: 24px; max-width: 250px; border: 8px solid #333 !important; box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important; transition: transform 0.3s ease;">
+            <img src="./assets/imgs/2026-04-27_11-30.png" alt="Aplicativo - Georreferenciamento" class="img-fluid" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card border-0 shadow overflow-hidden" style="border-radius: 24px; max-width: 250px; border: 8px solid #333 !important; box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important; transition: transform 0.3s ease;">
+            <img src="./assets/imgs/2026-04-27_11-30_2.png" alt="Aplicativo - Sincronização" class="img-fluid" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefícios Section -->
+      <div class="row align-items-center mt-5 pt-5">
+        <div class="col-lg-6">
+          <h3 class="section-title text-start mb-5">Vantagens da Implantação</h3>
+          
+          <div class="d-flex gap-3 mb-4 benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-2" style="color: var(--primary-color);">Para a Administração Municipal</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem;">Aumento sustentável da arrecadação tributária municipal sem o ônus político de aumentar alíquotas ou criar novos impostos.</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-4 benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold" style="color: var(--primary-color);">Para o Planejamento Urbano</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem;">Disponibilidade de dados cartográficos e territoriais atualizados para direcionar investimentos em saneamento, asfalto e creches.</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-4 benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold" style="color: var(--primary-color);">Para os Contribuintes</h5>
+              <p class="text-muted mb-0" style="font-size: 0.95rem;">Garantia de que a tributação é justa e proporcional, além de facilitação em processos de regularização e escrituras.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center mt-5 mt-lg-0">
+          <img src="./assets/imgs/geojson.png" alt="Georreferenciamento e Mapeamento" class="img-fluid" style="max-height: 420px; border-radius: 16px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.08)); animation: floatingAnimation 6s ease-in-out infinite;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="./assets/imgs/icon_full_blue.png" alt="IVF Logo">
+          </div>
+          <div class="footer-info">
+            <p class="company-title">A IVF empresa que representa a FIORILLI SOFTWARE SOC. CIVIL LTDA no Estado de Pernambuco se destaca como uma parceira estratégica para prefeituras e câmaras municipais, oferecendo soluções tecnológicas abrangentes e personalizadas. Desde 2017, nosso compromisso é impulsionar a eficiência da gestão pública, fornecendo suporte técnico especializado e ferramentas que facilitam o dia a dia da administração.</p>
+          </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-bottom">
+          <div class="footer-location">
+            <h4>CARUARU - PERNAMBUCO</h4>
+            <p>Visconde de Inhauma, 435, Sala 101. Empresarial Edifício Luisa Batista.</p>
+          </div>
+          <div class="footer-contact">
+            <h4>CONTATO</h4>
+            <p><i class="far fa-clock"></i> Funcionamento: Seg - Sex: 08:00 - 18:00</p>
+            <p><i class="far fa-envelope"></i> E-mail: atendimento@ivfassessoria.com</p>
+            <p><i class="fas fa-phone-alt"></i> Telefone: (81) 98705-4607</p>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/ivfassessoria/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/5581987054607" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; 2025 IVF Assessoria. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./assets/script/script.js"></script>
+  </body>
+</html>
