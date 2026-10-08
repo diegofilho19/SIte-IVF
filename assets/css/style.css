@@ -518,7 +518,6 @@ header {
     height: auto;
     position: relative;
     z-index: 2;
-    animation: slowSpin 35s linear infinite;
     filter: drop-shadow(0 0 15px rgba(13, 202, 240, 0.2));
 }
 
