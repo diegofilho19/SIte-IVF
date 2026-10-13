@@ -4,200 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EduCarteira - IVF ASSESSORIA</title>
+    <meta name="description" content="EduCarteira: identificação estudantil digital, controle de benefícios e frequência escolar em uma única plataforma para o município." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/icon_white.ico">
+    <link rel="stylesheet" href="./assets/css/product-rd.css" />
     <style>
+      /* EduCarteira: azul como cor de destaque */
       :root {
-        --primary-color: #003a70;
-        --secondary-color: #0d6efd;
-        --accent-color: #0dcaf0;
-        --hero-bg: linear-gradient(135deg, #002a54 0%, #0056b3 100%);
-        --accent-light: rgba(13, 202, 240, 0.15);
-        --primary-light: rgba(0, 58, 112, 0.06);
+        --rd-accent: #0d6efd;
+        --rd-accent-dark: #0a58ca;
+        --rd-accent-bright: #6ea8fe;
+        --rd-accent-soft: rgba(13, 110, 253, 0.12);
+        --rd-accent-glow: rgba(13, 110, 253, 0.2);
       }
 
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #333333;
-        background-color: #f8fafc;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif;
-      }
-
-      /* Hero section */
-      .subpage-hero {
-        background: var(--hero-bg);
-        padding: 100px 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .subpage-hero::before {
-        content: '';
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 50%;
-        top: -100px;
-        right: -100px;
-      }
-
-      .subpage-hero::after {
-        content: '';
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: var(--accent-light);
-        filter: blur(100px);
-        bottom: -50px;
-        left: 10%;
-        border-radius: 50%;
-      }
-
-      .hero-title {
-        font-size: 3.5rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: glowingText 4s infinite;
-      }
-
-      .hero-subtitle {
-        font-size: 1.25rem;
-        color: rgba(255, 255, 255, 0.85);
-        max-width: 600px;
-        line-height: 1.6;
-      }
-
-      /* Cards */
-      .feature-card {
-        background: #ffffff;
-        border-radius: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.03);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-        padding: 40px 30px;
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .feature-card::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        background: var(--secondary-color);
-        top: 0;
-        left: 0;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s ease;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 58, 112, 0.08);
-      }
-
-      .feature-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      .feature-icon-box {
-        width: 65px;
-        height: 65px;
-        border-radius: 16px;
-        background: var(--primary-light);
-        color: var(--primary-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        margin-bottom: 25px;
-        transition: all 0.3s ease;
-      }
-
-      .feature-card:hover .feature-icon-box {
-        background: var(--primary-color);
-        color: #ffffff;
-        transform: rotate(5deg);
-      }
-
-      /* Benefit item */
-      .benefit-item {
-        background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid rgba(0, 0, 0, 0.02);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
-        padding: 24px;
-        transition: all 0.3s ease;
-        border-left: 4px solid var(--secondary-color);
-      }
-
-      .benefit-item:hover {
-        background: #ffffff;
-        transform: translateX(8px);
-        box-shadow: 0 10px 30px rgba(0, 58, 112, 0.06);
-      }
-
-      .benefit-icon {
-        color: var(--secondary-color);
-        font-size: 22px;
-        margin-top: 2px;
-      }
-
-      .section-title {
-        color: var(--primary-color);
-        font-weight: 800;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 12px;
-      }
-
-      .section-title::after {
-        content: '';
-        position: absolute;
-        width: 60px;
-        height: 4px;
-        background: var(--secondary-color);
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .section-title.text-start::after {
-        left: 0;
-        transform: none;
-      }
-
-      .btn-custom {
-        border-radius: 30px;
-        font-weight: 700;
-        padding: 14px 32px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn-custom:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        color: #ffffff !important;
+      /* EduCarteira: exibir as telas do sistema por completo (sem corte) */
+      #sistema .rd-gallery-card img {
+        aspect-ratio: auto;
+        height: auto;
+        object-fit: contain;
       }
     </style>
   </head>
-  <body>
+  <body class="rd-page">
     <!--Cabeçalho-->
     <header class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container">
@@ -249,142 +83,344 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <div class="subpage-hero">
-      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <div class="text-center text-md-start">
-          <h1 class="hero-title mb-3">EduCarteira</h1>
-          <p class="hero-subtitle mb-4">A tecnologia transformando a gestão escolar e a identificação estudantil municipal.</p>
-          <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
-            <a href="index.html#contato" class="btn btn-light btn-custom text-primary">Solicitar Demonstração</a>
-            <a href="#detalhes" class="btn btn-outline-light btn-custom">Saber Mais</a>
+    <!-- ===================== HERO ===================== -->
+    <section class="rd-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="rd-eyebrow">EduCarteira</span>
+            <h1 class="rd-hero-title">Identificação estudantil moderna, segura e <em>100% digital</em>.</h1>
+            <p class="rd-hero-sub">Gestão de carteiras estudantis, benefícios e frequência escolar integradas em uma única plataforma para o município.</p>
+            <div class="rd-hero-actions">
+              <a href="https://wa.me/5581987054607" target="_blank" rel="noopener" class="rd-btn rd-btn--green">
+                <i class="far fa-calendar-alt" aria-hidden="true"></i> Solicitar demonstração
+              </a>
+              <a href="#solucao" class="rd-btn rd-btn--ghost">
+                <i class="fas fa-play-circle" aria-hidden="true"></i> Conheça a solução
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="rd-shot rd-hero-shot">
+              <div class="rd-shot-bar">
+                <span></span><span></span><span></span>
+                <b>PLATAFORMA EDUCARTEIRA</b>
+              </div>
+              <img src="./assets/imgs/educarteira.png" alt="Plataforma EduCarteira" loading="eager" />
+            </div>
           </div>
         </div>
-        <div class="mt-5 mt-md-0 d-flex justify-content-center">
-          <img src="./assets/imgs/logobranca.png" alt="EduCarteira Logo" class="rotating-logo img-fluid" style="max-width: 280px; filter: drop-shadow(0px 10px 25px rgba(0,0,0,0.25)); animation: floatingAnimation 4s ease-in-out infinite;" />
-        </div>
-      </div>
-    </div>
 
-    <!-- Main Section -->
-    <div id="detalhes" class="container my-5 py-5">
-      <div class="text-center mb-5">
-        <h2 class="section-title mb-4">O que é o EduCarteira?</h2>
-        <p class="lead mx-auto text-muted mt-2" style="max-width: 850px; font-size: 1.15rem; line-height: 1.8;">O EduCarteira é um sistema inovador desenvolvido pela IVF para otimizar a gestão de documentos estudantis e o acompanhamento acadêmico. Com ele, prefeituras e instituições de ensino gerenciam de forma eficiente a emissão de carteiras, controle de benefícios e integração de dados educacionais.</p>
-      </div>
-
-      <!-- Cards de Funcionalidades -->
-      <div class="row g-4 mt-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-id-card"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Documento Digital</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Emissão digital instantânea da carteira de estudante com validade e conformidade legal.</p>
+        <div class="rd-hero-strip">
+          <div class="rd-strip-item">
+            <i class="fas fa-id-card" aria-hidden="true"></i>
+            <p>Emissão digital de carteiras</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Validação Segura</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Autenticidade garantida por QR Code, inviabilizando fraudes e duplicações de registros.</p>
+          <div class="rd-strip-item">
+            <i class="fas fa-qrcode" aria-hidden="true"></i>
+            <p>Validação por QR Code</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-bus"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Gestão de Benefícios</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Controle preciso sobre a concessão de passagens escolares e acesso a programas sociais.</p>
+          <div class="rd-strip-item">
+            <i class="fas fa-bus" aria-hidden="true"></i>
+            <p>Controle de benefícios e meia-entrada</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Frequência Integrada</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Integração opcional com catracas e chamada eletrônica para monitorar a presença escolar.</p>
+          <div class="rd-strip-item">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i>
+            <p>Frequência escolar integrada</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Interface/Screenshot Gallery Section -->
-      <div class="row mt-5 pt-4">
-        <div class="col-12 text-center mb-4">
-          <h3 class="section-title">Conheça o Sistema</h3>
-          <p class="text-muted mt-2">Explore algumas telas da nossa plataforma de gestão e emissão.</p>
+    <!-- ===================== O DESAFIO ===================== -->
+    <section class="rd-section rd-sand" id="desafio">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">O desafio das escolas</span>
+          <h2 class="rd-h2">Processos manuais dificultam a gestão e abrem espaço para fraudes.</h2>
+          <p class="rd-lead">Papelada, cadastros dispersos e falta de integração comprometem o controle dos alunos e dos benefícios concedidos.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm overflow-hidden h-100" style="border-radius: 16px; transition: transform 0.3s ease;">
-            <img src="./assets/imgs/1.jpg" alt="EduCarteira - Tela 1" class="img-fluid" style="object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            <div class="card-body bg-white text-center">
-              <p class="text-muted mb-0 fw-semibold">Painel de Controle Principal</p>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="far fa-file-alt" aria-hidden="true"></i></span>
+              <h3>Processos manuais e papelada</h3>
+              <p>Emissão em papel gera custos, retrabalho e dificuldade de atualização dos dados dos alunos.</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm overflow-hidden h-100" style="border-radius: 16px; transition: transform 0.3s ease;">
-            <img src="./assets/imgs/2.jpg" alt="EduCarteira - Tela 2" class="img-fluid" style="object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            <div class="card-body bg-white text-center">
-              <p class="text-muted mb-0 fw-semibold">Gestão e Cadastro de Alunos</p>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+              <h3>Risco de fraudes na meia-entrada</h3>
+              <p>Documentos sem validação permitem duplicações e uso indevido dos benefícios.</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm overflow-hidden h-100" style="border-radius: 16px; transition: transform 0.3s ease;">
-            <img src="./assets/imgs/3.jpg" alt="EduCarteira - Tela 3" class="img-fluid" style="object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            <div class="card-body bg-white text-center">
-              <p class="text-muted mb-0 fw-semibold">Emissão e Validação de Documentos</p>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-link" aria-hidden="true"></i></span>
+              <h3>Falta de integração entre escolas</h3>
+              <p>Informações isoladas por unidade dificultam a visão consolidada da rede municipal.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-bus" aria-hidden="true"></i></span>
+              <h3>Controle limitado dos benefícios</h3>
+              <p>Sem dados confiáveis, é difícil auditar a concessão de transporte e programas sociais.</p>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Benefícios Section -->
-      <div class="row align-items-center mt-5 pt-5">
-        <div class="col-lg-6">
-          <h3 class="section-title text-start mb-5">Vantagens da Implantação</h3>
-          
-          <div class="d-flex gap-3 mb-4 benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold mb-2" style="color: var(--primary-color);">Para a Administração Municipal</h5>
-              <p class="text-muted mb-0" style="font-size: 0.95rem;">Redução de gastos operacionais com papelada física e inteligência de dados para tomada de decisões estratégicas na educação.</p>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3 mb-4 benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold" style="color: var(--primary-color);">Para as Instituições de Ensino</h5>
-              <p class="text-muted mb-0" style="font-size: 0.95rem;">Processo simplificado de matrícula, atualização cadastral e controle de fluxo dos alunos no ambiente escolar.</p>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3 mb-4 benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold" style="color: var(--primary-color);">Para os Estudantes</h5>
-              <p class="text-muted mb-0" style="font-size: 0.95rem;">Facilidade de carregar seu documento no celular e usufruir de seus direitos como meia-entrada de forma imediata.</p>
-            </div>
-          </div>
+    <!-- ===================== A SOLUÇÃO ===================== -->
+    <section class="rd-section" id="solucao">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">A solução</span>
+          <h2 class="rd-h2">Do cadastro do aluno à validação na catraca.</h2>
+          <p class="rd-lead">Uma plataforma completa para emitir carteiras, controlar benefícios e acompanhar a frequência escolar em tempo real.</p>
         </div>
-        <div class="col-lg-6 text-center mt-5 mt-lg-0">
-          <img src="./assets/imgs/At the office-pana 1.png" alt="Gestão e Planejamento" class="img-fluid" style="max-height: 420px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.08)); animation: floatingAnimation 6s ease-in-out infinite;" />
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="rd-prop">
+              <div class="rd-prop-top">
+                Carteira do estudante
+                <i class="fas fa-id-card" aria-hidden="true"></i>
+              </div>
+              <div class="rd-prop-body">
+                <div class="rd-prop-row">
+                  <span>Nome</span>
+                  <strong>Ana Beatriz Souza</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Matrícula</span>
+                  <strong>2026.0341.879</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Escola</span>
+                  <strong>EMEF Monteiro Lobato</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Série</span>
+                  <strong>9º ano - Integral</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Situação</span>
+                  <span class="rd-prop-status"><i class="fas fa-check" aria-hidden="true"></i> Ativa</span>
+                </div>
+              </div>
+              <a href="#sistema" class="rd-prop-btn">Emitir carteira</a>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-id-card" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Documento Digital</h3>
+                    <p>Emissão instantânea da carteira de estudante com validade e conformidade legal.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Validação Segura</h3>
+                    <p>Autenticidade garantida por QR Code, inviabilizando fraudes e duplicidades.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-bus" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Gestão de Benefícios</h3>
+                    <p>Controle preciso sobre passagens escolares e acesso a programas sociais.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Frequência Integrada</h3>
+                    <p>Integração opcional com catracas e chamada eletrônica para monitorar a presença.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA ===================== -->
+    <section class="rd-section rd-sand" id="como-funciona">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">Como funciona</span>
+          <h2 class="rd-h2">Uma jornada simples em quatro etapas.</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">1</span>
+              <h3>Cadastro dos alunos</h3>
+              <p>Importação e organização dos dados da rede municipal de ensino.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">2</span>
+              <h3>Emissão digital</h3>
+              <p>Geração das carteiras com foto, QR Code e dados de validação.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">3</span>
+              <h3>Validação e benefícios</h3>
+              <p>Leitura no acesso e controle da concessão de benefícios.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">4</span>
+              <h3>Acompanhamento</h3>
+              <p>Relatórios de frequência e indicadores para a gestão escolar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIA ===================== -->
+    <section class="rd-section" id="sistema">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">Conheça o sistema</span>
+          <h2 class="rd-h2">Telas do EduCarteira.</h2>
+          <p class="rd-lead">Explore algumas telas da plataforma de gestão e emissão de carteiras estudantis.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="rd-gallery-card">
+              <figure>
+                <img src="./assets/imgs/1.jpg" alt="EduCarteira - Painel de Controle Principal" loading="lazy" />
+                <figcaption>
+                  <h3>Painel de Controle</h3>
+                  <p>Visão geral dos alunos, carteiras emitidas e indicadores da rede.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rd-gallery-card">
+              <figure>
+                <img src="./assets/imgs/2.jpg" alt="EduCarteira - Gestão e Cadastro de Alunos" loading="lazy" />
+                <figcaption>
+                  <h3>Cadastro de Alunos</h3>
+                  <p>Gestão e atualização dos dados cadastrais dos estudantes.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rd-gallery-card">
+              <figure>
+                <img src="./assets/imgs/3.jpg" alt="EduCarteira - Emissão e Validação de Documentos" loading="lazy" />
+                <figcaption>
+                  <h3>Emissão e Validação</h3>
+                  <p>Emissão das carteiras e validação por QR Code.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESULTADOS ===================== -->
+    <section class="rd-section rd-sand" id="resultados">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">Resultados para o município</span>
+          <h2 class="rd-h2">Mais eficiência, segurança e praticidade.</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+              <div>
+                <h3>Redução de custos com papel e impressão</h3>
+                <p>Eliminação da papelada física e dos gastos recorrentes com emissão e reemissão.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-user-shield" aria-hidden="true"></i>
+              <div>
+                <h3>Segurança contra fraudes</h3>
+                <p>Documentos validados por QR Code, com autenticidade garantida em cada leitura.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-bus" aria-hidden="true"></i>
+              <div>
+                <h3>Gestão eficiente dos benefícios</h3>
+                <p>Controle transparente da concessão de transporte escolar e programas sociais.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+              <div>
+                <h3>Mais praticidade para o estudante</h3>
+                <p>Documento sempre disponível no celular, com acesso imediato à meia-entrada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="rd-cta" id="contato">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2>Pronto para modernizar a identificação estudantil do seu município?</h2>
+            <p>Conheça como a IVF pode apoiar a gestão escolar com o EduCarteira.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="rd-cta-actions">
+              <a href="https://wa.me/5581987054607" target="_blank" rel="noopener" class="rd-btn rd-btn--green">
+                <i class="far fa-calendar-alt" aria-hidden="true"></i> Solicitar demonstração
+              </a>
+              <a href="https://wa.me/5581987054607" target="_blank" rel="noopener" class="rd-cta-wa">Ou fale agora pelo WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp flutuante -->
+    <a class="rd-wa-float" href="https://wa.me/5581987054607" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -397,9 +433,9 @@
             <p class="company-title">A IVF empresa que representa a FIORILLI SOFTWARE SOC. CIVIL LTDA no Estado de Pernambuco se destaca como uma parceira estratégica para prefeituras e câmaras municipais, oferecendo soluções tecnológicas abrangentes e personalizadas. Desde 2017, nosso compromisso é impulsionar a eficiência da gestão pública, fornecendo suporte técnico especializado e ferramentas que facilitam o dia a dia da administração.</p>
           </div>
         </div>
-        
+
         <div class="footer-divider"></div>
-        
+
         <div class="footer-bottom">
           <div class="footer-location">
             <h4>BÉLEM DE MARIA - PERNAMBUCO</h4>
@@ -416,7 +452,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="footer-copyright">
           <p>&copy; 2025 IVF Assessoria. Todos os direitos reservados.</p>
         </div>

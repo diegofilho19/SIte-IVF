@@ -4,200 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FeiraRaiz - IVF ASSESSORIA</title>
+    <meta name="description" content="FeiraRaiz: cadastro de feirantes, distribuição justa de espaços e fomento à agricultura familiar e à economia local do município." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/icon_white.ico">
-    <style>
-      :root {
-        --primary-color: #114b2d;
-        --secondary-color: #198754;
-        --accent-color: #a3e635;
-        --hero-bg: linear-gradient(135deg, #0e3721 0%, #198754 100%);
-        --accent-light: rgba(163, 230, 53, 0.15);
-        --primary-light: rgba(25, 135, 84, 0.06);
-      }
-
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #333333;
-        background-color: #f8fafc;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Outfit', sans-serif;
-      }
-
-      /* Hero section */
-      .subpage-hero {
-        background: var(--hero-bg);
-        padding: 100px 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .subpage-hero::before {
-        content: '';
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 50%;
-        top: -100px;
-        right: -100px;
-      }
-
-      .subpage-hero::after {
-        content: '';
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: var(--accent-light);
-        filter: blur(100px);
-        bottom: -50px;
-        left: 10%;
-        border-radius: 50%;
-      }
-
-      .hero-title {
-        font-size: 3.5rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: glowingText 4s infinite;
-      }
-
-      .hero-subtitle {
-        font-size: 1.25rem;
-        color: rgba(255, 255, 255, 0.85);
-        max-width: 600px;
-        line-height: 1.6;
-      }
-
-      /* Cards */
-      .feature-card {
-        background: #ffffff;
-        border-radius: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.03);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-        padding: 40px 30px;
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .feature-card::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        background: var(--secondary-color);
-        top: 0;
-        left: 0;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s ease;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(25, 135, 84, 0.08);
-      }
-
-      .feature-card:hover::before {
-        transform: scaleX(1);
-      }
-
-      .feature-icon-box {
-        width: 65px;
-        height: 65px;
-        border-radius: 16px;
-        background: var(--primary-light);
-        color: var(--secondary-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        margin-bottom: 25px;
-        transition: all 0.3s ease;
-      }
-
-      .feature-card:hover .feature-icon-box {
-        background: var(--secondary-color);
-        color: #ffffff;
-        transform: rotate(5deg);
-      }
-
-      /* Benefit item */
-      .benefit-item {
-        background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid rgba(0, 0, 0, 0.02);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
-        padding: 24px;
-        transition: all 0.3s ease;
-        border-left: 4px solid var(--secondary-color);
-      }
-
-      .benefit-item:hover {
-        background: #ffffff;
-        transform: translateX(8px);
-        box-shadow: 0 10px 30px rgba(25, 135, 84, 0.06);
-      }
-
-      .benefit-icon {
-        color: var(--secondary-color);
-        font-size: 22px;
-        margin-top: 2px;
-      }
-
-      .section-title {
-        color: var(--primary-color);
-        font-weight: 800;
-        position: relative;
-        display: inline-block;
-        padding-bottom: 12px;
-      }
-
-      .section-title::after {
-        content: '';
-        position: absolute;
-        width: 60px;
-        height: 4px;
-        background: var(--secondary-color);
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
-
-      .section-title.text-start::after {
-        left: 0;
-        transform: none;
-      }
-
-      .btn-custom {
-        border-radius: 30px;
-        font-weight: 700;
-        padding: 14px 32px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn-custom:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        color: #ffffff !important;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/product-rd.css" />
   </head>
-  <body>
+  <body class="rd-page">
     <!--Cabeçalho-->
     <header class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container">
@@ -249,110 +66,293 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <div class="subpage-hero">
-      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-        <div class="text-center text-md-start">
-          <h1 class="hero-title mb-3">FeiraRaiz</h1>
-          <p class="hero-subtitle mb-4">Apoio à agricultura familiar e organização moderna de feiras livres municipais.</p>
-          <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
-            <a href="index.html#contato" class="btn btn-light btn-custom text-success">Fale Conosco</a>
-            <a href="#detalhes" class="btn btn-outline-light btn-custom">Saber Mais</a>
+    <!-- ===================== HERO ===================== -->
+    <section class="rd-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="rd-eyebrow">FeiraRaiz</span>
+            <h1 class="rd-hero-title">Feiras livres organizadas e a <em>agricultura familiar</em> valorizada.</h1>
+            <p class="rd-hero-sub">Cadastro de feirantes, distribuição justa de espaços e indicadores para fomentar a economia local do município.</p>
+            <div class="rd-hero-actions">
+              <a href="https://wa.me/5581987054607" target="_blank" rel="noopener" class="rd-btn rd-btn--green">
+                <i class="far fa-calendar-alt" aria-hidden="true"></i> Fale conosco
+              </a>
+              <a href="#solucao" class="rd-btn rd-btn--ghost">
+                <i class="fas fa-play-circle" aria-hidden="true"></i> Conheça a solução
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="rd-media rd-hero-shot">
+              <img src="./assets/imgs/At the office-pana 1.png" alt="Ilustração de organização de feiras e agricultura familiar" loading="eager" />
+            </div>
           </div>
         </div>
-        <div class="mt-5 mt-md-0 d-flex justify-content-center">
-          <img src="./assets/imgs/icon_blue.png" alt="FeiraRaiz Logo" class="rotating-logo img-fluid" style="max-width: 280px; filter: drop-shadow(0px 10px 25px rgba(0,0,0,0.25)); animation: floatingAnimation 4s ease-in-out infinite;" />
-        </div>
-      </div>
-    </div>
 
-    <!-- Main Section -->
-    <div id="detalhes" class="container my-5 py-5">
-      <div class="text-center mb-5">
-        <h2 class="section-title mb-4">O que é o FeiraRaiz?</h2>
-        <p class="lead mx-auto text-muted mt-2" style="max-width: 850px; font-size: 1.15rem; line-height: 1.8;">O FeiraRaiz é uma plataforma completa voltada para a estruturação de feiras livres e o fomento à agricultura familiar municipal. Ele automatiza o cadastramento de feirantes, gerencia espaços de forma justa e conecta os produtores diretamente à comunidade local.</p>
-      </div>
-
-      <!-- Cards de Funcionalidades -->
-      <div class="row g-4 mt-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-users-cog"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Cadastro Digital</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Mapeamento e controle completo dos perfis dos feirantes locais e seus respectivos alvarás.</p>
+        <div class="rd-hero-strip">
+          <div class="rd-strip-item">
+            <i class="fas fa-user-plus" aria-hidden="true"></i>
+            <p>Cadastro digital de feirantes</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-map-marked-alt"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Distribuição de Bancas</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Gestão inteligente e transparente do espaço público e zoneamento das categorias de venda.</p>
+          <div class="rd-strip-item">
+            <i class="fas fa-th-large" aria-hidden="true"></i>
+            <p>Distribuição justa de bancas</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-store"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Canal do Produtor</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Aproximação direta entre agricultores familiares e consumidores, valorizando a economia local.</p>
+          <div class="rd-strip-item">
+            <i class="fas fa-store" aria-hidden="true"></i>
+            <p>Canal direto com o produtor</p>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card feature-card">
-            <div class="feature-icon-box">
-              <i class="fas fa-chart-pie"></i>
-            </div>
-            <h4 class="fw-bold mb-3" style="color: var(--primary-color);">Indicadores Locais</h4>
-            <p class="text-muted mb-0" style="font-size: 0.95rem; line-height: 1.6;">Relatórios consolidados de vendas e movimentação econômica para embasamento de políticas públicas.</p>
+          <div class="rd-strip-item">
+            <i class="fas fa-chart-pie" aria-hidden="true"></i>
+            <p>Indicadores da economia local</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Benefícios Section -->
-      <div class="row align-items-center mt-5 pt-5">
-        <div class="col-lg-6">
-          <h3 class="section-title text-start mb-5">Vantagens da Implantação</h3>
-          
-          <div class="d-flex gap-3 mb-4 benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold mb-2" style="color: var(--primary-color);">Para a Administração Municipal</h5>
-              <p class="text-muted mb-0" style="font-size: 0.95rem;">Ordenamento urbano simplificado, facilidade na organização fiscal e fomento ativo ao empreendedorismo de pequeno porte.</p>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3 mb-4 benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold" style="color: var(--primary-color);">Para Feirantes e Produtores</h5>
-              <p class="text-muted mb-0" style="font-size: 0.95rem;">Melhores condições de trabalho, localização organizada no espaço de vendas e maior visibilidade de suas marcas e produtos.</p>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3 mb-4 benefit-item">
-            <div class="benefit-icon">
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold" style="color: var(--primary-color);">Para a Comunidade</h5>
-              <p class="text-muted mb-0" style="font-size: 0.95rem;">Ambientes de feiras mais higiênicos, seguros e estruturados, além de acesso rápido a alimentos de alta qualidade vindos da região.</p>
-            </div>
-          </div>
+    <!-- ===================== O DESAFIO ===================== -->
+    <section class="rd-section rd-sand" id="desafio">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">O desafio das feiras</span>
+          <h2 class="rd-h2">Feiras desorganizadas reduzem a renda e a qualidade de vida.</h2>
+          <p class="rd-lead">Sem cadastro e zoneamento adequados, o espaço público é disputado de forma desigual e o produtor local perde visibilidade.</p>
         </div>
-        <div class="col-lg-6 text-center mt-5 mt-lg-0">
-          <img src="./assets/imgs/At the office-pana 1.png" alt="Desenvolvimento Econômico" class="img-fluid" style="max-height: 420px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.08)); animation: floatingAnimation 6s ease-in-out infinite;" />
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-users" aria-hidden="true"></i></span>
+              <h3>Feirantes sem cadastro organizado</h3>
+              <p>Falta de dados atualizados sobre quem são e o que vendem os feirantes do município.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></span>
+              <h3>Ocupação desordenada dos espaços</h3>
+              <p>Ausência de zoneamento gera conflitos e vantagens desiguais na ocupação das bancas.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-store" aria-hidden="true"></i></span>
+              <h3>Baixa visibilidade do produtor local</h3>
+              <p>Pouca conexão com o consumidor reduz as oportunidades de venda da agricultura familiar.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-card">
+              <span class="rd-card-ico"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+              <h3>Falta de dados sobre a economia local</h3>
+              <p>Sem indicadores, é difícil apoiar políticas públicas para o setor.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ===================== A SOLUÇÃO ===================== -->
+    <section class="rd-section" id="solucao">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">A solução</span>
+          <h2 class="rd-h2">Do cadastro do feirante à gestão da feira.</h2>
+          <p class="rd-lead">Uma plataforma completa para organizar as feiras livres, valorizar o produtor e apoiar decisões com dados reais.</p>
+        </div>
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <div class="rd-prop">
+              <div class="rd-prop-top">
+                Feirante cadastrado
+                <i class="fas fa-store" aria-hidden="true"></i>
+              </div>
+              <div class="rd-prop-body">
+                <div class="rd-prop-row">
+                  <span>Nome</span>
+                  <strong>José Carlos Pereira</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Categoria</span>
+                  <strong>Hortifrúti</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Banca</span>
+                  <strong>A-12</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Feira</span>
+                  <strong>Feira Central</strong>
+                </div>
+                <div class="rd-prop-row">
+                  <span>Situação</span>
+                  <span class="rd-prop-status"><i class="fas fa-check" aria-hidden="true"></i> Ativo</span>
+                </div>
+              </div>
+              <a href="#resultados" class="rd-prop-btn">Ver cadastro</a>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-users-cog" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Cadastro Digital</h3>
+                    <p>Mapeamento e controle dos perfis dos feirantes locais e seus alvarás.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Distribuição de Bancas</h3>
+                    <p>Gestão transparente do espaço público e zoneamento por categoria de venda.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-store" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Canal do Produtor</h3>
+                    <p>Aproximação direta entre agricultores familiares e consumidores.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="rd-feature">
+                  <span class="rd-feature-ico"><i class="fas fa-chart-pie" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Indicadores Locais</h3>
+                    <p>Relatórios de vendas e movimentação econômica para embasar políticas públicas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA ===================== -->
+    <section class="rd-section rd-sand" id="como-funciona">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">Como funciona</span>
+          <h2 class="rd-h2">Uma jornada simples em quatro etapas.</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">1</span>
+              <h3>Cadastro dos feirantes</h3>
+              <p>Registro dos produtores, categorias e documentação da atividade.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">2</span>
+              <h3>Zoneamento da feira</h3>
+              <p>Organização dos espaços e definição das áreas por categoria.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">3</span>
+              <h3>Atribuição de bancas</h3>
+              <p>Distribuição justa e transparente dos pontos de venda.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="rd-step">
+              <span class="rd-step-n">4</span>
+              <h3>Acompanhamento</h3>
+              <p>Indicadores de vendas e movimentação para a gestão municipal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESULTADOS ===================== -->
+    <section class="rd-section" id="resultados">
+      <div class="container">
+        <div class="rd-head--center">
+          <span class="rd-eyebrow rd-eyebrow--green rd-eyebrow--center">Resultados para o município</span>
+          <h2 class="rd-h2">Mais organização, renda e qualidade para todos.</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-city" aria-hidden="true"></i>
+              <div>
+                <h3>Ordenamento urbano e fiscal</h3>
+                <p>Espaço público organizado, com cadastro e alvarás em conformidade.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-seedling" aria-hidden="true"></i>
+              <div>
+                <h3>Fomento ao empreendedorismo local</h3>
+                <p>Fortalecimento da agricultura familiar e do comércio de pequeno porte.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-store" aria-hidden="true"></i>
+              <div>
+                <h3>Melhores condições para feirantes</h3>
+                <p>Localização organizada, mais visibilidade e gestão justa das bancas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="rd-result">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <div>
+                <h3>Alimentos de qualidade para a comunidade</h3>
+                <p>Feiras mais higiênicas, seguras e estruturadas, com produtos da região.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="rd-cta" id="contato">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2>Pronto para valorizar as feiras e a agricultura familiar do seu município?</h2>
+            <p>Conheça como a IVF pode apoiar a organização das feiras livres com o FeiraRaiz.</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="rd-cta-actions">
+              <a href="https://wa.me/5581987054607" target="_blank" rel="noopener" class="rd-btn rd-btn--green">
+                <i class="far fa-calendar-alt" aria-hidden="true"></i> Falar conosco
+              </a>
+              <a href="https://wa.me/5581987054607" target="_blank" rel="noopener" class="rd-cta-wa">Ou fale agora pelo WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp flutuante -->
+    <a class="rd-wa-float" href="https://wa.me/5581987054607" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -365,9 +365,9 @@
             <p class="company-title">A IVF empresa que representa a FIORILLI SOFTWARE SOC. CIVIL LTDA no Estado de Pernambuco se destaca como uma parceira estratégica para prefeituras e câmaras municipais, oferecendo soluções tecnológicas abrangentes e personalizadas. Desde 2017, nosso compromisso é impulsionar a eficiência da gestão pública, fornecendo suporte técnico especializado e ferramentas que facilitam o dia a dia da administração.</p>
           </div>
         </div>
-        
+
         <div class="footer-divider"></div>
-        
+
         <div class="footer-bottom">
           <div class="footer-location">
             <h4>BÉLEM DE MARIA - PERNAMBUCO</h4>
@@ -384,7 +384,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="footer-copyright">
           <p>&copy; 2025 IVF Assessoria. Todos os direitos reservados.</p>
         </div>
